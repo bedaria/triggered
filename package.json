@@ -4,7 +4,7 @@
   "description": "a react and redux project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha setup.js ./client/tests.js",
     "express-server": "nodemon ./server/server.js",
     "build": "webpack --watch",
     "dev": "concurrently --kill-others \"npm run build\" \"npm run express-server\""
@@ -26,7 +26,14 @@
     "webpack": "^1.14.0"
   },
   "devDependencies": {
+    "babel-preset-airbnb": "^2.1.1",
+    "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
     "concurrently": "^3.1.0",
-    "nodemon": "^1.11.0"
+    "enzyme": "^2.7.0",
+    "jsdom": "^9.9.1",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "react-addons-test-utils": "^15.4.2"
   }
 }
